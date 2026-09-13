@@ -28,20 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnAtras = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dgvTablaClientes = new System.Windows.Forms.DataGridView();
-            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colEmpresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCorreo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDniCuil = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnHistorial = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.colAccion = new System.Windows.Forms.DataGridViewButtonColumn();
             this.grbRegistrarModificar = new System.Windows.Forms.GroupBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
@@ -63,6 +53,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtBusquedaFiltrado = new System.Windows.Forms.TextBox();
             this.btnAgregarCliente = new System.Windows.Forms.Button();
+            this.colId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colEmpresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCorreo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDniCuil = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnHistorial = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.colAccion = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -114,8 +114,8 @@
             this.dgvTablaClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTablaClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colId,
-            this.colApellido,
             this.colNombre,
+            this.colApellido,
             this.colEmpresa,
             this.colTelefono,
             this.colCorreo,
@@ -123,14 +123,14 @@
             this.colDireccion,
             this.btnHistorial,
             this.colAccion});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.LightGreen;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTablaClientes.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightGreen;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTablaClientes.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvTablaClientes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvTablaClientes.GridColor = System.Drawing.Color.LimeGreen;
             this.dgvTablaClientes.Location = new System.Drawing.Point(0, 0);
@@ -140,69 +140,6 @@
             this.dgvTablaClientes.TabIndex = 3;
             this.dgvTablaClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTablaClientes_CellContentClick);
             this.dgvTablaClientes.CellMouseUp += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvTablaClientes_CellMouseUp);
-            // 
-            // colId
-            // 
-            this.colId.HeaderText = "Id";
-            this.colId.Name = "colId";
-            this.colId.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colId.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // colApellido
-            // 
-            this.colApellido.HeaderText = "Apellido";
-            this.colApellido.Name = "colApellido";
-            this.colApellido.Visible = false;
-            // 
-            // colNombre
-            // 
-            this.colNombre.FillWeight = 85.88832F;
-            this.colNombre.HeaderText = "Nombre";
-            this.colNombre.Name = "colNombre";
-            // 
-            // colEmpresa
-            // 
-            this.colEmpresa.FillWeight = 85.88832F;
-            this.colEmpresa.HeaderText = "Empresa";
-            this.colEmpresa.Name = "colEmpresa";
-            // 
-            // colTelefono
-            // 
-            this.colTelefono.FillWeight = 85.88832F;
-            this.colTelefono.HeaderText = "Teléfono";
-            this.colTelefono.Name = "colTelefono";
-            // 
-            // colCorreo
-            // 
-            this.colCorreo.FillWeight = 85.88832F;
-            this.colCorreo.HeaderText = "Correo electronico";
-            this.colCorreo.Name = "colCorreo";
-            // 
-            // colDniCuil
-            // 
-            this.colDniCuil.FillWeight = 85.88832F;
-            this.colDniCuil.HeaderText = "DNI/CUIL";
-            this.colDniCuil.Name = "colDniCuil";
-            // 
-            // colDireccion
-            // 
-            this.colDireccion.HeaderText = "Direccion";
-            this.colDireccion.Name = "colDireccion";
-            this.colDireccion.Visible = false;
-            // 
-            // btnHistorial
-            // 
-            this.btnHistorial.HeaderText = "Historial";
-            this.btnHistorial.Name = "btnHistorial";
-            this.btnHistorial.Text = "Ver";
-            this.btnHistorial.UseColumnTextForButtonValue = true;
-            // 
-            // colAccion
-            // 
-            this.colAccion.HeaderText = "Acción";
-            this.colAccion.Name = "colAccion";
-            this.colAccion.Text = "Modificar";
-            this.colAccion.UseColumnTextForButtonValue = true;
             // 
             // grbRegistrarModificar
             // 
@@ -274,6 +211,7 @@
             this.txtDniCuil.Name = "txtDniCuil";
             this.txtDniCuil.Size = new System.Drawing.Size(346, 23);
             this.txtDniCuil.TabIndex = 11;
+            this.txtDniCuil.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SoloNumerosYGuiones_KeyPress);
             // 
             // txtEmail
             // 
@@ -290,6 +228,7 @@
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(346, 23);
             this.txtTelefono.TabIndex = 9;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SoloNumerosYGuiones_KeyPress);
             // 
             // lblDireccion
             // 
@@ -311,9 +250,9 @@
             this.lblCorreo.ForeColor = System.Drawing.Color.ForestGreen;
             this.lblCorreo.Location = new System.Drawing.Point(83, 161);
             this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(156, 14);
+            this.lblCorreo.Size = new System.Drawing.Size(161, 14);
             this.lblCorreo.TabIndex = 7;
-            this.lblCorreo.Text = "CORREO ELÉCTRONICO";
+            this.lblCorreo.Text = "*CORREO ELÉCTRONICO";
             // 
             // lblDniCuil
             // 
@@ -323,9 +262,9 @@
             this.lblDniCuil.ForeColor = System.Drawing.Color.ForestGreen;
             this.lblDniCuil.Location = new System.Drawing.Point(459, 106);
             this.lblDniCuil.Name = "lblDniCuil";
-            this.lblDniCuil.Size = new System.Drawing.Size(67, 14);
+            this.lblDniCuil.Size = new System.Drawing.Size(72, 14);
             this.lblDniCuil.TabIndex = 6;
-            this.lblDniCuil.Text = "DNI / CUIL";
+            this.lblDniCuil.Text = "*DNI / CUIL";
             // 
             // lblTelefono
             // 
@@ -335,9 +274,9 @@
             this.lblTelefono.ForeColor = System.Drawing.Color.ForestGreen;
             this.lblTelefono.Location = new System.Drawing.Point(83, 106);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(74, 14);
+            this.lblTelefono.Size = new System.Drawing.Size(79, 14);
             this.lblTelefono.TabIndex = 5;
-            this.lblTelefono.Text = "TELÉFONO";
+            this.lblTelefono.Text = "*TELÉFONO";
             // 
             // txtResponsable
             // 
@@ -355,9 +294,9 @@
             this.lblResponsable.ForeColor = System.Drawing.Color.ForestGreen;
             this.lblResponsable.Location = new System.Drawing.Point(459, 47);
             this.lblResponsable.Name = "lblResponsable";
-            this.lblResponsable.Size = new System.Drawing.Size(100, 14);
+            this.lblResponsable.Size = new System.Drawing.Size(220, 14);
             this.lblResponsable.TabIndex = 3;
-            this.lblResponsable.Text = "RESPONSABLE";
+            this.lblResponsable.Text = "*RESPONSABLE (nombre y apellido)";
             // 
             // txtNombreNegocio
             // 
@@ -375,9 +314,9 @@
             this.lblNombreNegocio.ForeColor = System.Drawing.Color.ForestGreen;
             this.lblNombreNegocio.Location = new System.Drawing.Point(83, 46);
             this.lblNombreNegocio.Name = "lblNombreNegocio";
-            this.lblNombreNegocio.Size = new System.Drawing.Size(152, 14);
+            this.lblNombreNegocio.Size = new System.Drawing.Size(157, 14);
             this.lblNombreNegocio.TabIndex = 1;
-            this.lblNombreNegocio.Text = "NOMBRE DEL NEGOCIO";
+            this.lblNombreNegocio.Text = "*NOMBRE DEL NEGOCIO";
             // 
             // lblRegistrarModificar
             // 
@@ -448,6 +387,67 @@
             this.btnAgregarCliente.UseVisualStyleBackColor = false;
             this.btnAgregarCliente.Click += new System.EventHandler(this.btnAgregarCliente_Click);
             // 
+            // colId
+            // 
+            this.colId.HeaderText = "Id";
+            this.colId.Name = "colId";
+            this.colId.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colId.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // colNombre
+            // 
+            this.colNombre.FillWeight = 85.88832F;
+            this.colNombre.HeaderText = "Nombre";
+            this.colNombre.Name = "colNombre";
+            // 
+            // colApellido
+            // 
+            this.colApellido.HeaderText = "Apellido";
+            this.colApellido.Name = "colApellido";
+            // 
+            // colEmpresa
+            // 
+            this.colEmpresa.FillWeight = 85.88832F;
+            this.colEmpresa.HeaderText = "Empresa";
+            this.colEmpresa.Name = "colEmpresa";
+            // 
+            // colTelefono
+            // 
+            this.colTelefono.FillWeight = 85.88832F;
+            this.colTelefono.HeaderText = "Teléfono";
+            this.colTelefono.Name = "colTelefono";
+            // 
+            // colCorreo
+            // 
+            this.colCorreo.FillWeight = 85.88832F;
+            this.colCorreo.HeaderText = "Correo electronico";
+            this.colCorreo.Name = "colCorreo";
+            // 
+            // colDniCuil
+            // 
+            this.colDniCuil.FillWeight = 85.88832F;
+            this.colDniCuil.HeaderText = "DNI/CUIL";
+            this.colDniCuil.Name = "colDniCuil";
+            // 
+            // colDireccion
+            // 
+            this.colDireccion.HeaderText = "Direccion";
+            this.colDireccion.Name = "colDireccion";
+            // 
+            // btnHistorial
+            // 
+            this.btnHistorial.HeaderText = "Historial";
+            this.btnHistorial.Name = "btnHistorial";
+            this.btnHistorial.Text = "Ver";
+            this.btnHistorial.UseColumnTextForButtonValue = true;
+            // 
+            // colAccion
+            // 
+            this.colAccion.HeaderText = "Acción";
+            this.colAccion.Name = "colAccion";
+            this.colAccion.Text = "Modificar";
+            this.colAccion.UseColumnTextForButtonValue = true;
+            // 
             // FormClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -480,16 +480,6 @@
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.DataGridView dgvTablaClientes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colApellido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colEmpresa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTelefono;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCorreo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDniCuil;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDireccion;
-        private System.Windows.Forms.DataGridViewButtonColumn btnHistorial;
-        private System.Windows.Forms.DataGridViewButtonColumn colAccion;
         private System.Windows.Forms.GroupBox grbRegistrarModificar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
@@ -511,5 +501,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBusquedaFiltrado;
         private System.Windows.Forms.Button btnAgregarCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colApellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colEmpresa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTelefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCorreo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDniCuil;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDireccion;
+        private System.Windows.Forms.DataGridViewButtonColumn btnHistorial;
+        private System.Windows.Forms.DataGridViewButtonColumn colAccion;
     }
 }

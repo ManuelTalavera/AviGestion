@@ -134,15 +134,36 @@ namespace AviGestion_.Interfaz
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            // EVENTO DEL BOTÓN GUARDAR CAMBIOS (PROCESA TANTO MODIFICAR COMO AGREGAR)
             try
             {
+                List<string> todosLosErrores = new List<string>();
+
+                if (string.IsNullOrWhiteSpace(txtNombreNegocio.Text)) todosLosErrores.Add("- El nombre del negocio es obligatorio.");
+                if (string.IsNullOrWhiteSpace(txtResponsable.Text)) todosLosErrores.Add("- El responsable es obligatorio.");
+                if (string.IsNullOrWhiteSpace(txtTelefono.Text)) todosLosErrores.Add("- El teléfono es obligatorio.");
+                if (string.IsNullOrWhiteSpace(txtEmail.Text)) todosLosErrores.Add("- El correo es obligatorio.");
+                if (string.IsNullOrWhiteSpace(txtDniCuil.Text)) todosLosErrores.Add("- El DNI/CUIL es obligatorio.");
+
+                if (todosLosErrores.Count == 0)
+                {
+                    List<string> erroresLogica = clienteLogica.ValidarFormatosLogicos(txtTelefono.Text, txtDniCuil.Text, txtEmail.Text, txtResponsable.Text.Trim());
+
+                    todosLosErrores.AddRange(erroresLogica);
+                }
+
+                if (todosLosErrores.Count > 0)
+                {
+                    string mensajeFinal = string.Join("\n", todosLosErrores);
+                    MessageBox.Show("Por favor, corrija los siguientes errores:\n\n" + mensajeFinal,
+                                    "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
                 string responsableCompleto = txtResponsable.Text.Trim();
                 string nombreGuardar = responsableCompleto;
                 string apellidoGuardar = "";
-
-                // Si el usuario ingresó un espacio, separa el primer nombre del resto (apellido)
                 int primerEspacio = responsableCompleto.IndexOf(' ');
+
                 if (primerEspacio > 0)
                 {
                     nombreGuardar = responsableCompleto.Substring(0, primerEspacio).Trim();
@@ -153,8 +174,8 @@ namespace AviGestion_.Interfaz
                 {
                     Id_Cliente = idClienteSeleccionado,
                     Empresa = txtNombreNegocio.Text.Trim(),
-                    Nombre = nombreGuardar,  
-                    Apellido = apellidoGuardar, 
+                    Nombre = nombreGuardar,
+                    Apellido = apellidoGuardar,
                     Telefono = txtTelefono.Text.Trim(),
                     Direccion = txtDireccion.Text.Trim(),
                     CorreoElectronico = txtEmail.Text.Trim(),
@@ -164,16 +185,23 @@ namespace AviGestion_.Interfaz
                 clienteLogica.GuardarCliente(cliente);
 
                 MessageBox.Show("Los datos se guardaron correctamente en la base de datos.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                 grbRegistrarModificar.Visible = false;
                 CargarDatosClientes();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
+        private void SoloNumerosYGuiones_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Bloquea cualquier cosa que no sea número, tecla de borrar o guion
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back && e.KeyChar != '-' && e.KeyChar != '+')
+            {
+                e.Handled = true;
+            }
+        }
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             grbRegistrarModificar.Visible = false;

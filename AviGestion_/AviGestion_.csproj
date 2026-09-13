@@ -46,10 +46,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Datos\ClienteDatos.cs" />
     <Compile Include="Datos\Conexion.cs" />
     <Compile Include="Datos\DatosProducto.cs" />
+    <Compile Include="Datos\HistorialClienteDatos.cs" />
     <Compile Include="Datos\UsuarioDatos.cs" />
+    <Compile Include="Interfaz\FormClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaz\FormClientes.Designer.cs">
+      <DependentUpon>FormClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\FormHistorialCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaz\FormHistorialCliente.Designer.cs">
+      <DependentUpon>FormHistorialCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Logica\ABM_Producto.cs" />
+    <Compile Include="Logica\Cliente.cs" />
+    <Compile Include="Logica\ClienteLogica.cs" />
+    <Compile Include="Logica\HistorialClienteLogica.cs" />
     <Compile Include="Logica\Producto.cs" />
     <Compile Include="Logica\Usuario.cs" />
     <Compile Include="Logica\UsuarioLogica.cs" />
@@ -81,6 +98,12 @@
     </Compile>
     <EmbeddedResource Include="Interfaz\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz\FormClientes.resx">
+      <DependentUpon>FormClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz\FormHistorialCliente.resx">
+      <DependentUpon>FormHistorialCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

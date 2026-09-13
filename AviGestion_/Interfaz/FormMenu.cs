@@ -1,4 +1,5 @@
-﻿using AviGestion_.Logica;
+﻿using AviGestion_.Interfaz;
+using AviGestion_.Logica;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -72,6 +73,12 @@ namespace AviGestion_.UI
         {
 
         }
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            FormClientes frmCliente = new FormClientes();
+            frmCliente.Show();
+            this.Hide();
+        }
 
         private void btnProductos_Paint(object sender, PaintEventArgs e)
         {
@@ -83,9 +90,6 @@ namespace AviGestion_.UI
             frm.Show();
             this.Hide();
         }
-        
-
-        
 
         private void btnProductos_Click(object sender, EventArgs e)
         {
@@ -93,10 +97,6 @@ namespace AviGestion_.UI
             frm.Show();
             this.Hide();
         }
-
-
-
-
     }
 
 }

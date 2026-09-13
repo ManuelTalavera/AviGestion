@@ -101,6 +101,7 @@ namespace AviGestion_.UI
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Size = new System.Drawing.Size(260, 150);
             this.btnClientes.TabIndex = 6;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             this.btnClientes.Paint += new System.Windows.Forms.PaintEventHandler(this.btnClientes_Paint);
             // 
             // lblClientesDescripcion

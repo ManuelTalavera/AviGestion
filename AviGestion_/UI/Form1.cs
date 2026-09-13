@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AviGestion_
+namespace AviGestion_.Interfaz
 {
     public partial class Form1 : Form
     {

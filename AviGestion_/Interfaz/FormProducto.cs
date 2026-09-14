@@ -8,13 +8,14 @@ namespace AviGestion_.UI
     {
         private ABM_Producto logica = new ABM_Producto();
         private int idSeleccionado = 0;
+        private Usuario usuarioActual;
 
-        public FormProducto()
+        public FormProducto(Usuario usuario)
         {
             InitializeComponent();
+            usuarioActual = usuario;
             ConfigurarPlaceholderBuscar();
             this.Load += FormProducto_Load;
-            this.dgvProductos.CellClick += dgvProductos_CellClick;
         }
 
         private void ConfigurarPlaceholderBuscar()
@@ -51,17 +52,6 @@ namespace AviGestion_.UI
             var lista = logica.BuscarProductos(filtro);
             dgvProductos.DataSource = null;
             dgvProductos.DataSource = lista;
-
-            if (dgvProductos.Columns.Count > 0)
-            {
-                dgvProductos.Columns["Id"].Visible = false;
-                dgvProductos.Columns["Codigo"].HeaderText = "Código";
-                dgvProductos.Columns["Descripcion"].HeaderText = "Producto";
-                dgvProductos.Columns["Categoria"].HeaderText = "Categoría";
-                dgvProductos.Columns["Precio"].HeaderText = "Precio";
-                dgvProductos.Columns["Stock"].HeaderText = "Stock";
-                dgvProductos.Columns["Estado"].HeaderText = "Estado";
-            }
         }
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
@@ -75,17 +65,22 @@ namespace AviGestion_.UI
             LimpiarFormulario();
         }
 
-        private void dgvProductos_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0) return;
-            var fila = dgvProductos.Rows[e.RowIndex];
-            idSeleccionado = Convert.ToInt32(fila.Cells["Id"].Value);
-            txtCodigo.Text = fila.Cells["Codigo"].Value.ToString();
-            txtDescripcion.Text = fila.Cells["Descripcion"].Value.ToString();
-            cmbCategoria.Text = fila.Cells["Categoria"].Value.ToString();
-            nudPrecio.Value = Convert.ToDecimal(fila.Cells["Precio"].Value);
-            nudStock.Value = Convert.ToDecimal(fila.Cells["Stock"].Value);
-            cmbEstado.Text = fila.Cells["Estado"].Value.ToString();
+            if (dgvProductos.Columns[e.ColumnIndex].Name != "colSeleccionar") return;
+
+            var producto = (Producto)dgvProductos.Rows[e.RowIndex].DataBoundItem;
+
+            idSeleccionado = producto.Id;
+            txtCodigo.Text = producto.Codigo;
+            txtDescripcion.Text = producto.Descripcion;
+            cmbCategoria.Text = producto.Categoria;
+            nudPrecio.Value = producto.Precio;
+            nudStock.Value = producto.Stock;
+            nudStockMinimo.Value = producto.StockMinimo;
+            nudStockMaximo.Value = producto.StockMaximo;
+            cmbEstado.Text = producto.Estado;
         }
 
         private void btnRegistrarProducto_Click(object sender, EventArgs e)
@@ -100,6 +95,8 @@ namespace AviGestion_.UI
                     Categoria = cmbCategoria.Text,
                     Precio = nudPrecio.Value,
                     Stock = (int)nudStock.Value,
+                    StockMinimo = (int)nudStockMinimo.Value,
+                    StockMaximo = (int)nudStockMaximo.Value,
                     Estado = string.IsNullOrEmpty(cmbEstado.Text) ? "Activo" : cmbEstado.Text
                 };
 
@@ -116,9 +113,45 @@ namespace AviGestion_.UI
             }
         }
 
+        private void btnEliminarProducto_Click(object sender, EventArgs e)
+        {
+            if (idSeleccionado == 0)
+            {
+                MessageBox.Show("Seleccioná un producto de la lista antes de eliminarlo.");
+                return;
+            }
+
+            var confirmacion = MessageBox.Show(
+                $"¿Confirma que desea eliminar el producto '{txtDescripcion.Text}'?",
+                "Confirmar baja", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (confirmacion != DialogResult.Yes) return;
+
+            try
+            {
+                logica.EliminarProducto(idSeleccionado);
+                MessageBox.Show("Producto eliminado correctamente.", "Éxito",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                LimpiarFormulario();
+                CargarGrilla();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             LimpiarFormulario();
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            FormMenu menu = new FormMenu(usuarioActual);
+            menu.Show();
+            this.Close();
         }
 
         private void LimpiarFormulario()
@@ -129,6 +162,8 @@ namespace AviGestion_.UI
             cmbCategoria.SelectedIndex = -1;
             nudPrecio.Value = 0;
             nudStock.Value = 0;
+            nudStockMinimo.Value = 0;
+            nudStockMaximo.Value = 0;
             cmbEstado.SelectedIndex = -1;
         }
     }

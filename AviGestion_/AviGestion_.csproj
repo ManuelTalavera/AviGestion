@@ -49,8 +49,15 @@
     <Compile Include="Datos\ClienteDatos.cs" />
     <Compile Include="Datos\Conexion.cs" />
     <Compile Include="Datos\DatosProducto.cs" />
+    <Compile Include="Datos\DatosStock.cs" />
     <Compile Include="Datos\HistorialClienteDatos.cs" />
     <Compile Include="Datos\UsuarioDatos.cs" />
+    <Compile Include="Interfaz\FormCargaStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaz\FormCargaStock.Designer.cs">
+      <DependentUpon>FormCargaStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaz\FormClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,10 +71,12 @@
       <DependentUpon>FormHistorialCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Logica\ABM_Producto.cs" />
+    <Compile Include="Logica\Alerta.cs" />
     <Compile Include="Logica\Cliente.cs" />
     <Compile Include="Logica\ClienteLogica.cs" />
     <Compile Include="Logica\HistorialClienteLogica.cs" />
     <Compile Include="Logica\Producto.cs" />
+    <Compile Include="Logica\StockLogica.cs" />
     <Compile Include="Logica\Usuario.cs" />
     <Compile Include="Logica\UsuarioLogica.cs" />
     <Compile Include="Interfaz\Form1.cs">
@@ -98,6 +107,9 @@
     </Compile>
     <EmbeddedResource Include="Interfaz\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz\FormCargaStock.resx">
+      <DependentUpon>FormCargaStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaz\FormClientes.resx">
       <DependentUpon>FormClientes.cs</DependentUpon>

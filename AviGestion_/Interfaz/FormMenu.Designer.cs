@@ -41,15 +41,9 @@ namespace AviGestion_.UI
             this.btnPedidos = new System.Windows.Forms.Panel();
             this.lblPedidosDescripcion = new System.Windows.Forms.Label();
             this.lblPedidosTitulo = new System.Windows.Forms.Label();
-            this.btnProductos = new System.Windows.Forms.Panel();
-            this.lblProductosDescripcion = new System.Windows.Forms.Label();
-            this.lblProductosTitulo = new System.Windows.Forms.Label();
             this.btnAsignarPedidos = new System.Windows.Forms.Panel();
             this.lblAsignarPedidosDescripcion = new System.Windows.Forms.Label();
             this.lblAsignarPedidosTitulo = new System.Windows.Forms.Label();
-            this.btnStock = new System.Windows.Forms.Panel();
-            this.lblStockDescripcion = new System.Windows.Forms.Label();
-            this.lblStockTitulo = new System.Windows.Forms.Label();
             this.btnCategorias = new System.Windows.Forms.Panel();
             this.lblCategoriasDescripcion = new System.Windows.Forms.Label();
             this.lblCategoriasTitulo = new System.Windows.Forms.Label();
@@ -59,13 +53,15 @@ namespace AviGestion_.UI
             this.btnAyuda = new System.Windows.Forms.Panel();
             this.lblAyudaDescripcion = new System.Windows.Forms.Label();
             this.lblAyudaTitulo = new System.Windows.Forms.Label();
+            this.btnStock = new System.Windows.Forms.Button();
+            this.lblStockDescripcion = new System.Windows.Forms.Label();
+            this.btnProductos = new System.Windows.Forms.Button();
+            this.lblProductosDescripcion = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.btnClientes.SuspendLayout();
             this.btnUsuarios.SuspendLayout();
             this.btnPedidos.SuspendLayout();
-            this.btnProductos.SuspendLayout();
             this.btnAsignarPedidos.SuspendLayout();
-            this.btnStock.SuspendLayout();
             this.btnCategorias.SuspendLayout();
             this.btnVehiculos.SuspendLayout();
             this.btnAyuda.SuspendLayout();
@@ -186,38 +182,6 @@ namespace AviGestion_.UI
             this.lblPedidosTitulo.TabIndex = 0;
             this.lblPedidosTitulo.Text = "Pedidos";
             // 
-            // btnProductos
-            // 
-            this.btnProductos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.btnProductos.Controls.Add(this.lblProductosDescripcion);
-            this.btnProductos.Controls.Add(this.lblProductosTitulo);
-            this.btnProductos.Location = new System.Drawing.Point(20, 220);
-            this.btnProductos.Name = "btnProductos";
-            this.btnProductos.Size = new System.Drawing.Size(260, 150);
-            this.btnProductos.TabIndex = 9;
-            this.btnProductos.Paint += new System.Windows.Forms.PaintEventHandler(this.btnProductos_Paint);
-            // 
-            // lblProductosDescripcion
-            // 
-            this.lblProductosDescripcion.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProductosDescripcion.Location = new System.Drawing.Point(10, 85);
-            this.lblProductosDescripcion.Name = "lblProductosDescripcion";
-            this.lblProductosDescripcion.Size = new System.Drawing.Size(240, 51);
-            this.lblProductosDescripcion.TabIndex = 1;
-            this.lblProductosDescripcion.Text = "Control y mantenimiento detallado del catálogo de productos.";
-            this.lblProductosDescripcion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblProductosTitulo
-            // 
-            this.lblProductosTitulo.AutoSize = true;
-            this.lblProductosTitulo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProductosTitulo.Location = new System.Drawing.Point(78, 55);
-            this.lblProductosTitulo.Name = "lblProductosTitulo";
-            this.lblProductosTitulo.Size = new System.Drawing.Size(89, 19);
-            this.lblProductosTitulo.TabIndex = 0;
-            this.lblProductosTitulo.Text = "Productos";
-            this.lblProductosTitulo.Click += new System.EventHandler(this.lblProductosTitulo_Click);
-            // 
             // btnAsignarPedidos
             // 
             this.btnAsignarPedidos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -247,36 +211,6 @@ namespace AviGestion_.UI
             this.lblAsignarPedidosTitulo.Size = new System.Drawing.Size(135, 19);
             this.lblAsignarPedidosTitulo.TabIndex = 0;
             this.lblAsignarPedidosTitulo.Text = "Asignar Pedidos";
-            // 
-            // btnStock
-            // 
-            this.btnStock.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.btnStock.Controls.Add(this.lblStockDescripcion);
-            this.btnStock.Controls.Add(this.lblStockTitulo);
-            this.btnStock.Location = new System.Drawing.Point(580, 220);
-            this.btnStock.Name = "btnStock";
-            this.btnStock.Size = new System.Drawing.Size(260, 150);
-            this.btnStock.TabIndex = 11;
-            // 
-            // lblStockDescripcion
-            // 
-            this.lblStockDescripcion.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStockDescripcion.Location = new System.Drawing.Point(10, 85);
-            this.lblStockDescripcion.Name = "lblStockDescripcion";
-            this.lblStockDescripcion.Size = new System.Drawing.Size(240, 51);
-            this.lblStockDescripcion.TabIndex = 1;
-            this.lblStockDescripcion.Text = "Gestión de inventario en tiempo real y alertas de nivel bajo.";
-            this.lblStockDescripcion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblStockTitulo
-            // 
-            this.lblStockTitulo.AutoSize = true;
-            this.lblStockTitulo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStockTitulo.Location = new System.Drawing.Point(103, 55);
-            this.lblStockTitulo.Name = "lblStockTitulo";
-            this.lblStockTitulo.Size = new System.Drawing.Size(53, 19);
-            this.lblStockTitulo.TabIndex = 0;
-            this.lblStockTitulo.Text = "Stock";
             // 
             // btnCategorias
             // 
@@ -368,24 +302,77 @@ namespace AviGestion_.UI
             this.lblAyudaTitulo.TabIndex = 0;
             this.lblAyudaTitulo.Text = "Ayuda";
             // 
+            // btnStock
+            // 
+            this.btnStock.BackColor = System.Drawing.Color.Transparent;
+            this.btnStock.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.btnStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStock.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStock.Location = new System.Drawing.Point(580, 220);
+            this.btnStock.Name = "btnStock";
+            this.btnStock.Size = new System.Drawing.Size(260, 150);
+            this.btnStock.TabIndex = 15;
+            this.btnStock.Text = "Stock";
+            this.btnStock.UseVisualStyleBackColor = false;
+            this.btnStock.Click += new System.EventHandler(this.btnStock_Click_1);
+            // 
+            // lblStockDescripcion
+            // 
+            this.lblStockDescripcion.AutoSize = true;
+            this.lblStockDescripcion.BackColor = System.Drawing.Color.Transparent;
+            this.lblStockDescripcion.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStockDescripcion.Location = new System.Drawing.Point(603, 317);
+            this.lblStockDescripcion.Name = "lblStockDescripcion";
+            this.lblStockDescripcion.Size = new System.Drawing.Size(215, 40);
+            this.lblStockDescripcion.TabIndex = 16;
+            this.lblStockDescripcion.Text = "Gestión de inventario en tiempo real y\r\n alertas de nivel bajo.";
+            this.lblStockDescripcion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnProductos
+            // 
+            this.btnProductos.BackColor = System.Drawing.Color.Transparent;
+            this.btnProductos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.btnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProductos.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProductos.Location = new System.Drawing.Point(17, 220);
+            this.btnProductos.Name = "btnProductos";
+            this.btnProductos.Size = new System.Drawing.Size(260, 150);
+            this.btnProductos.TabIndex = 17;
+            this.btnProductos.Text = "Productos";
+            this.btnProductos.UseVisualStyleBackColor = false;
+            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click_1);
+            // 
+            // lblProductosDescripcion
+            // 
+            this.lblProductosDescripcion.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProductosDescripcion.Location = new System.Drawing.Point(26, 313);
+            this.lblProductosDescripcion.Name = "lblProductosDescripcion";
+            this.lblProductosDescripcion.Size = new System.Drawing.Size(240, 51);
+            this.lblProductosDescripcion.TabIndex = 1;
+            this.lblProductosDescripcion.Text = "Control y mantenimiento detallado del catálogo de productos.";
+            this.lblProductosDescripcion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OldLace;
             this.ClientSize = new System.Drawing.Size(860, 570);
+            this.Controls.Add(this.lblProductosDescripcion);
+            this.Controls.Add(this.btnProductos);
+            this.Controls.Add(this.lblStockDescripcion);
+            this.Controls.Add(this.btnStock);
             this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.btnVehiculos);
             this.Controls.Add(this.btnCategorias);
-            this.Controls.Add(this.btnStock);
             this.Controls.Add(this.btnAsignarPedidos);
-            this.Controls.Add(this.btnProductos);
             this.Controls.Add(this.btnPedidos);
             this.Controls.Add(this.btnUsuarios);
             this.Controls.Add(this.btnClientes);
             this.Controls.Add(this.panel1);
             this.Name = "FormMenu";
             this.Text = "FormMenu";
+            this.Load += new System.EventHandler(this.FormMenu_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.btnClientes.ResumeLayout(false);
@@ -394,12 +381,8 @@ namespace AviGestion_.UI
             this.btnUsuarios.PerformLayout();
             this.btnPedidos.ResumeLayout(false);
             this.btnPedidos.PerformLayout();
-            this.btnProductos.ResumeLayout(false);
-            this.btnProductos.PerformLayout();
             this.btnAsignarPedidos.ResumeLayout(false);
             this.btnAsignarPedidos.PerformLayout();
-            this.btnStock.ResumeLayout(false);
-            this.btnStock.PerformLayout();
             this.btnCategorias.ResumeLayout(false);
             this.btnCategorias.PerformLayout();
             this.btnVehiculos.ResumeLayout(false);
@@ -407,6 +390,7 @@ namespace AviGestion_.UI
             this.btnAyuda.ResumeLayout(false);
             this.btnAyuda.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -427,17 +411,9 @@ namespace AviGestion_.UI
         private System.Windows.Forms.Label lblPedidosTitulo;
         private System.Windows.Forms.Label lblPedidosDescripcion;
 
-        private System.Windows.Forms.Panel btnProductos;
-        private System.Windows.Forms.Label lblProductosTitulo;
-        private System.Windows.Forms.Label lblProductosDescripcion;
-
         private System.Windows.Forms.Panel btnAsignarPedidos;
         private System.Windows.Forms.Label lblAsignarPedidosTitulo;
         private System.Windows.Forms.Label lblAsignarPedidosDescripcion;
-
-        private System.Windows.Forms.Panel btnStock;
-        private System.Windows.Forms.Label lblStockTitulo;
-        private System.Windows.Forms.Label lblStockDescripcion;
 
         private System.Windows.Forms.Panel btnCategorias;
         private System.Windows.Forms.Label lblCategoriasTitulo;
@@ -450,6 +426,10 @@ namespace AviGestion_.UI
         private System.Windows.Forms.Panel btnAyuda;
         private System.Windows.Forms.Label lblAyudaTitulo;
         private System.Windows.Forms.Label lblAyudaDescripcion;
+        private System.Windows.Forms.Button btnStock;
+        private System.Windows.Forms.Label lblStockDescripcion;
+        private System.Windows.Forms.Button btnProductos;
+        private System.Windows.Forms.Label lblProductosDescripcion;
     }
 }
 

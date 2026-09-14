@@ -9,5 +9,19 @@
         public decimal Precio { get; set; }
         public int Stock { get; set; }
         public string Estado { get; set; }
+        public int StockMinimo { get; set; }
+        public int StockMaximo { get; set; }
+
+        // Propiedad calculada: no se guarda en la base, se calcula sola
+        public string EstadoStock
+        {
+            get
+            {
+                if (Stock <= StockMinimo) return "Stock Mínimo";
+                if (Stock >= StockMaximo) return "Stock Máximo";
+                if (Stock >= StockMaximo * 0.9) return "Próx. a Máximo";
+                return "Normal";
+            }
+        }
     }
 }

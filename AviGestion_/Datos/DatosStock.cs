@@ -1,12 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 using AviGestion_.Logica;
 
 namespace AviGestion_.Datos
 {
-    public class DatosProducto
+    public class DatosStock
     {
-        public List<Producto> Listar()
+        public List<Producto> ListarProductosConStock()
         {
             var lista = new List<Producto>();
             using (SqlConnection cn = Conexion.ObtenerConexion())
@@ -26,13 +27,13 @@ namespace AviGestion_.Datos
             return lista;
         }
 
-        public List<Producto> Buscar(string filtro)
+        public List<Producto> BuscarProductosConStock(string filtro)
         {
             var lista = new List<Producto>();
             using (SqlConnection cn = Conexion.ObtenerConexion())
             {
                 string sql = @"SELECT Id, Codigo, Descripcion, Categoria, Precio, Stock, StockMinimo, StockMaximo, Estado 
-                               FROM Productos 
+                               FROM Productos
                                WHERE Codigo LIKE @filtro OR Descripcion LIKE @filtro";
                 using (SqlCommand cmd = new SqlCommand(sql, cn))
                 {
@@ -64,79 +65,79 @@ namespace AviGestion_.Datos
             };
         }
 
-        // NUEVO: evita productos con el mismo código (causa de las filas duplicadas).
-        // idExcluir sirve para que, al modificar un producto, no se choque consigo mismo.
-        public bool ExisteCodigo(string codigo, int idExcluir)
+        public void ActualizarStockProducto(int idProducto, int nuevoStock)
         {
             using (SqlConnection cn = Conexion.ObtenerConexion())
             {
-                string sql = "SELECT COUNT(1) FROM Productos WHERE Codigo = @codigo AND Id <> @idExcluir";
+                string sql = "UPDATE Productos SET Stock = @stock WHERE Id = @id";
                 using (SqlCommand cmd = new SqlCommand(sql, cn))
                 {
-                    cmd.Parameters.AddWithValue("@codigo", codigo);
-                    cmd.Parameters.AddWithValue("@idExcluir", idExcluir);
-                    cn.Open();
-                    int cantidad = (int)cmd.ExecuteScalar();
-                    return cantidad > 0;
-                }
-            }
-        }
-
-        public void Registrar(Producto p)
-        {
-            using (SqlConnection cn = Conexion.ObtenerConexion())
-            {
-                string sql = @"INSERT INTO Productos (Codigo, Descripcion, Categoria, Precio, Stock, StockMinimo, StockMaximo, Estado) 
-                               VALUES (@codigo, @descripcion, @categoria, @precio, @stock, @stockMinimo, @stockMaximo, @estado)";
-                using (SqlCommand cmd = new SqlCommand(sql, cn))
-                {
-                    cmd.Parameters.AddWithValue("@codigo", p.Codigo);
-                    cmd.Parameters.AddWithValue("@descripcion", p.Descripcion);
-                    cmd.Parameters.AddWithValue("@categoria", p.Categoria);
-                    cmd.Parameters.AddWithValue("@precio", p.Precio);
-                    cmd.Parameters.AddWithValue("@stock", p.Stock);
-                    cmd.Parameters.AddWithValue("@stockMinimo", p.StockMinimo);
-                    cmd.Parameters.AddWithValue("@stockMaximo", p.StockMaximo);
-                    cmd.Parameters.AddWithValue("@estado", p.Estado);
+                    cmd.Parameters.AddWithValue("@stock", nuevoStock);
+                    cmd.Parameters.AddWithValue("@id", idProducto);
                     cn.Open();
                     cmd.ExecuteNonQuery();
                 }
             }
         }
 
-        public void Modificar(Producto p)
+        public Alerta ObtenerAlertaActiva(int idProducto, string tipoAlerta)
         {
             using (SqlConnection cn = Conexion.ObtenerConexion())
             {
-                string sql = @"UPDATE Productos SET Codigo=@codigo, Descripcion=@descripcion, 
-                               Categoria=@categoria, Precio=@precio, Stock=@stock, 
-                               StockMinimo=@stockMinimo, StockMaximo=@stockMaximo, Estado=@estado 
-                               WHERE Id=@id";
+                string sql = @"SELECT TOP 1 Id, ProductoId, TipoAlerta, Estado, FechaGeneracion 
+                               FROM Alertas 
+                               WHERE ProductoId = @id AND TipoAlerta = @tipo AND Estado = 'Activa'";
                 using (SqlCommand cmd = new SqlCommand(sql, cn))
                 {
-                    cmd.Parameters.AddWithValue("@codigo", p.Codigo);
-                    cmd.Parameters.AddWithValue("@descripcion", p.Descripcion);
-                    cmd.Parameters.AddWithValue("@categoria", p.Categoria);
-                    cmd.Parameters.AddWithValue("@precio", p.Precio);
-                    cmd.Parameters.AddWithValue("@stock", p.Stock);
-                    cmd.Parameters.AddWithValue("@stockMinimo", p.StockMinimo);
-                    cmd.Parameters.AddWithValue("@stockMaximo", p.StockMaximo);
-                    cmd.Parameters.AddWithValue("@estado", p.Estado);
-                    cmd.Parameters.AddWithValue("@id", p.Id);
+                    cmd.Parameters.AddWithValue("@id", idProducto);
+                    cmd.Parameters.AddWithValue("@tipo", tipoAlerta);
+                    cn.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return new Alerta
+                            {
+                                Id = (int)reader["Id"],
+                                ProductoId = (int)reader["ProductoId"],
+                                TipoAlerta = reader["TipoAlerta"].ToString(),
+                                Estado = reader["Estado"].ToString(),
+                                FechaGeneracion = (DateTime)reader["FechaGeneracion"]
+                            };
+                        }
+                    }
+                }
+            }
+            return null;
+        }
+
+        public void InsertarAlerta(Alerta alerta)
+        {
+            using (SqlConnection cn = Conexion.ObtenerConexion())
+            {
+                string sql = @"INSERT INTO Alertas (ProductoId, TipoAlerta, Estado, FechaGeneracion) 
+                               VALUES (@productoId, @tipo, @estado, GETDATE())";
+                using (SqlCommand cmd = new SqlCommand(sql, cn))
+                {
+                    cmd.Parameters.AddWithValue("@productoId", alerta.ProductoId);
+                    cmd.Parameters.AddWithValue("@tipo", alerta.TipoAlerta);
+                    cmd.Parameters.AddWithValue("@estado", alerta.Estado);
                     cn.Open();
                     cmd.ExecuteNonQuery();
                 }
             }
         }
 
-        public void Eliminar(int id)
+        public void ResolverAlertasActivas(int idProducto, string tipoAlerta)
         {
             using (SqlConnection cn = Conexion.ObtenerConexion())
             {
-                string sql = "DELETE FROM Productos WHERE Id=@id";
+                string sql = @"UPDATE Alertas SET Estado = 'Resuelta', FechaResolucion = GETDATE() 
+                               WHERE ProductoId = @id AND TipoAlerta = @tipo AND Estado = 'Activa'";
                 using (SqlCommand cmd = new SqlCommand(sql, cn))
                 {
-                    cmd.Parameters.AddWithValue("@id", id);
+                    cmd.Parameters.AddWithValue("@id", idProducto);
+                    cmd.Parameters.AddWithValue("@tipo", tipoAlerta);
                     cn.Open();
                     cmd.ExecuteNonQuery();
                 }

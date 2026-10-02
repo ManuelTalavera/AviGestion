@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AviGestion_.Logica;
+using AviGestion_.UI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,18 +9,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using AviGestion_.Logica;
 
 namespace AviGestion_.Interfaz
 {
     public partial class FormClientes : Form
     {
         private ClienteLogica clienteLogica = new ClienteLogica();
-        private int idClienteSeleccionado = -1;
         private List<Cliente> listaOriginalClientes = new List<Cliente>();
-        public FormClientes()
+        private int idClienteSeleccionado = -1;
+        private Usuario usuarioActual; //Agregado
+
+        public FormClientes(Usuario usuario)//MODIFICADO
         {
             InitializeComponent();
+            usuarioActual = usuario;//Agregado
             splitContainer1.Panel2Collapsed = false;
             grbRegistrarModificar.Visible = false;
             dgvTablaClientes.MultiSelect = false;
@@ -207,8 +211,10 @@ namespace AviGestion_.Interfaz
             grbRegistrarModificar.Visible = false;
         }
 
-        private void btnAtras_Click(object sender, EventArgs e)
+        private void btnAtras_Click(object sender, EventArgs e)//Modificado
         {
+            FormMenu menu = new FormMenu(usuarioActual);
+            menu.Show();
             this.Close();
         }
 

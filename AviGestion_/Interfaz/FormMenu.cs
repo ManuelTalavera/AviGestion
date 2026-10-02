@@ -57,7 +57,7 @@ namespace AviGestion_.UI
                     btnClientes.Visible = true;
                     btnUsuarios.Visible = true;
                     btnStock.Visible=false;
-                    btnProductos.Visible=false;  
+                    btnProductos.Visible=true;  
                     break;
 
                 case "Administrador de pedidos":
@@ -82,7 +82,7 @@ namespace AviGestion_.UI
         }
         private void btnClientes_Click(object sender, EventArgs e)
         {
-            FormClientes frmCliente = new FormClientes();
+            FormClientes frmCliente = new FormClientes(usuarioActual);
             frmCliente.Show();
             this.Hide();
         }

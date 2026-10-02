@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlFiltros = new System.Windows.Forms.Panel();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
@@ -92,7 +92,7 @@
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnLimpiar.BackColor = System.Drawing.Color.Beige;
             this.btnLimpiar.FlatAppearance.BorderColor = System.Drawing.Color.ForestGreen;
             this.btnLimpiar.FlatAppearance.BorderSize = 2;
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -121,7 +121,8 @@
             // 
             // btnVerDetalle
             // 
-            this.btnVerDetalle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
+            this.btnVerDetalle.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnVerDetalle.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnVerDetalle.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerDetalle.ForeColor = System.Drawing.Color.White;
             this.btnVerDetalle.Location = new System.Drawing.Point(784, 529);
@@ -134,7 +135,7 @@
             // 
             // pnlResumen
             // 
-            this.pnlResumen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(205)))));
+            this.pnlResumen.BackColor = System.Drawing.Color.White;
             this.pnlResumen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlResumen.Controls.Add(this.lblUltimaCompraValor);
             this.pnlResumen.Controls.Add(this.lblUltimaCompra);
@@ -287,18 +288,18 @@
             // 
             // dgvHistorial
             // 
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.dgvHistorial.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvHistorial.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvHistorial.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvHistorial.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHistorial.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHistorial.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvHistorial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHistorial.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colN,
@@ -358,7 +359,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.LightYellow;
+            this.panel1.BackColor = System.Drawing.Color.Beige;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.lblSaldoPendienteValor);
             this.panel1.Controls.Add(this.lblSaldoPendienteEtiqueta);
@@ -433,7 +434,7 @@
             // 
             // pnlInfoCliente
             // 
-            this.pnlInfoCliente.BackColor = System.Drawing.Color.LightGreen;
+            this.pnlInfoCliente.BackColor = System.Drawing.Color.ForestGreen;
             this.pnlInfoCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlInfoCliente.Controls.Add(this.lblDireccionValor);
             this.pnlInfoCliente.Controls.Add(this.lblDireccionEtiqueta);
@@ -459,7 +460,7 @@
             // 
             this.lblDireccionEtiqueta.AutoSize = true;
             this.lblDireccionEtiqueta.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDireccionEtiqueta.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lblDireccionEtiqueta.ForeColor = System.Drawing.Color.Black;
             this.lblDireccionEtiqueta.Location = new System.Drawing.Point(645, 4);
             this.lblDireccionEtiqueta.Name = "lblDireccionEtiqueta";
             this.lblDireccionEtiqueta.Size = new System.Drawing.Size(78, 16);
@@ -479,7 +480,7 @@
             // 
             this.lblContactoEtiqueta.AutoSize = true;
             this.lblContactoEtiqueta.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContactoEtiqueta.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lblContactoEtiqueta.ForeColor = System.Drawing.Color.Black;
             this.lblContactoEtiqueta.Location = new System.Drawing.Point(326, 6);
             this.lblContactoEtiqueta.Name = "lblContactoEtiqueta";
             this.lblContactoEtiqueta.Size = new System.Drawing.Size(78, 16);
@@ -499,7 +500,7 @@
             // 
             this.lblClienteEtiqueta.AutoSize = true;
             this.lblClienteEtiqueta.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClienteEtiqueta.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lblClienteEtiqueta.ForeColor = System.Drawing.Color.Black;
             this.lblClienteEtiqueta.Location = new System.Drawing.Point(9, 4);
             this.lblClienteEtiqueta.Name = "lblClienteEtiqueta";
             this.lblClienteEtiqueta.Size = new System.Drawing.Size(61, 16);
@@ -509,9 +510,8 @@
             // btnCerrar
             // 
             this.btnCerrar.BackColor = System.Drawing.Color.White;
-            this.btnCerrar.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnCerrar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnCerrar.FlatAppearance.BorderSize = 2;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
             this.btnCerrar.Location = new System.Drawing.Point(672, 532);
@@ -526,6 +526,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(918, 573);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.pnlFiltros);

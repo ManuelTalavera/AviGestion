@@ -119,10 +119,30 @@ namespace AviGestion_.UI
 
         private void btnStock_Click_1(object sender, EventArgs e)
         {
-            FormCargaStock frm = new FormCargaStock(usuarioActual);
+            FrmCargaStock frm = new FrmCargaStock(usuarioActual);
             frm.Show();
             this.Hide();
         }
+
+        private void btnPedidos_Click(object sender, EventArgs e)
+        {
+            FrmPedidos frm = new FrmPedidos();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void btnCategorias_Click(object sender, EventArgs e)
+        {
+            FrmCategorias frm = new FrmCategorias();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void btnCategorias_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
     }
 
 }

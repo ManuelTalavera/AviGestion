@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.6.2\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.6, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.6\lib\net461\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,17 +52,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Datos\CategoriaDatos.cs" />
     <Compile Include="Datos\ClienteDatos.cs" />
     <Compile Include="Datos\Conexion.cs" />
     <Compile Include="Datos\DatosProducto.cs" />
     <Compile Include="Datos\DatosStock.cs" />
     <Compile Include="Datos\HistorialClienteDatos.cs" />
+    <Compile Include="Datos\ModelosPedido.cs" />
+    <Compile Include="Datos\PedidoDatos.cs" />
     <Compile Include="Datos\UsuarioDatos.cs" />
-    <Compile Include="Interfaz\FormCargaStock.cs">
+    <Compile Include="Interfaz\FrmAgregarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Interfaz\FormCargaStock.Designer.cs">
-      <DependentUpon>FormCargaStock.cs</DependentUpon>
+    <Compile Include="Interfaz\FrmAgregarCliente.Designer.cs">
+      <DependentUpon>FrmAgregarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\FrmCargaStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaz\FrmCargaStock.Designer.cs">
+      <DependentUpon>FrmCargaStock.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaz\FormClientes.cs">
       <SubType>Form</SubType>
@@ -70,11 +85,25 @@
     <Compile Include="Interfaz\FormHistorialCliente.Designer.cs">
       <DependentUpon>FormHistorialCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaz\FrmCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaz\FrmCategorias.Designer.cs">
+      <DependentUpon>FrmCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\FrmPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaz\FrmPedidos.Designer.cs">
+      <DependentUpon>FrmPedidos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Logica\ABM_Producto.cs" />
     <Compile Include="Logica\Alerta.cs" />
+    <Compile Include="Logica\CategoriaLogica.cs" />
     <Compile Include="Logica\Cliente.cs" />
     <Compile Include="Logica\ClienteLogica.cs" />
     <Compile Include="Logica\HistorialClienteLogica.cs" />
+    <Compile Include="Logica\PedidoLogica.cs" />
     <Compile Include="Logica\Producto.cs" />
     <Compile Include="Logica\StockLogica.cs" />
     <Compile Include="Logica\Usuario.cs" />
@@ -108,14 +137,23 @@
     <EmbeddedResource Include="Interfaz\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Interfaz\FormCargaStock.resx">
-      <DependentUpon>FormCargaStock.cs</DependentUpon>
+    <EmbeddedResource Include="Interfaz\FrmAgregarCliente.resx">
+      <DependentUpon>FrmAgregarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz\FrmCargaStock.resx">
+      <DependentUpon>FrmCargaStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaz\FormClientes.resx">
       <DependentUpon>FormClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaz\FormHistorialCliente.resx">
       <DependentUpon>FormHistorialCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz\FrmCategorias.resx">
+      <DependentUpon>FrmCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz\FrmPedidos.resx">
+      <DependentUpon>FrmPedidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -135,6 +173,7 @@
     <EmbeddedResource Include="Interfaz\FormUsuarios.resx">
       <DependentUpon>FormUsuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

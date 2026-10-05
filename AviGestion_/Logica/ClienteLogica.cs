@@ -24,9 +24,7 @@ namespace AviGestion_.Logica
                 errores.Add("- Debe ingresar nombre y apellido separados por un espacio.");
 
             string telLimpio = telefono.Replace("-", "").Replace(" ", "");
-            if (!telefono.Contains("+"))
-                errores.Add("- El teléfono debe incluir el código de país (ej: +54).");
-            else if (telLimpio.Length < 10)
+            if (telLimpio.Length < 10)
                 errores.Add("- El número de teléfono es demasiado corto.");
 
             if (!correo.Contains("@") || !correo.Contains("."))

@@ -17,12 +17,12 @@ namespace AviGestion_.Interfaz
         private ClienteLogica clienteLogica = new ClienteLogica();
         private List<Cliente> listaOriginalClientes = new List<Cliente>();
         private int idClienteSeleccionado = -1;
-        private Usuario usuarioActual; //Agregado
+        private Usuario usuarioActual; 
 
         public FormClientes(Usuario usuario)//MODIFICADO
         {
             InitializeComponent();
-            usuarioActual = usuario;//Agregado
+            usuarioActual = usuario;
             splitContainer1.Panel2Collapsed = false;
             grbRegistrarModificar.Visible = false;
             dgvTablaClientes.MultiSelect = false;
@@ -34,7 +34,12 @@ namespace AviGestion_.Interfaz
         private void FormClientes_Load(object sender, EventArgs e)
         {
             dgvTablaClientes.AutoGenerateColumns = false;
-
+            //Configuración de grilla a solo lectura
+            dgvTablaClientes.ReadOnly = true;
+            dgvTablaClientes.AllowUserToAddRows = false;
+            dgvTablaClientes.AllowUserToDeleteRows = false;
+            dgvTablaClientes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvTablaClientes.MultiSelect = false;
             // Enlaces entre las columnas de la Grilla y las propiedades de la Clase
             if (dgvTablaClientes.Columns.Contains("colId"))
                 dgvTablaClientes.Columns["colId"].DataPropertyName = "Id_Cliente";
@@ -66,12 +71,14 @@ namespace AviGestion_.Interfaz
 
         private void dgvTablaClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex < 0) return;
             // Verificar que sea la columna Acción (Modificar) y una fila válida
             if (e.ColumnIndex == dgvTablaClientes.Columns["colAccion"].Index && e.RowIndex >= 0)
             {
                 MapearFilaAFormulario(e.RowIndex);
+                return;
             }
-            if (dgvTablaClientes.Columns[e.ColumnIndex].Name == "btnHistorial")
+            if (dgvTablaClientes.Columns.Contains("btnHistorial") && dgvTablaClientes.Columns[e.ColumnIndex].Name == "btnHistorial")
             {
                 var fila = dgvTablaClientes.Rows[e.RowIndex];
                 int idCliente = Convert.ToInt32(fila.Cells["colId"].Value);
@@ -201,7 +208,7 @@ namespace AviGestion_.Interfaz
         private void SoloNumerosYGuiones_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Bloquea cualquier cosa que no sea número, tecla de borrar o guion
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back && e.KeyChar != '-' && e.KeyChar != '+')
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back && e.KeyChar != ' ')
             {
                 e.Handled = true;
             }

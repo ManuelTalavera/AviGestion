@@ -1,0 +1,263 @@
+﻿namespace AviGestion_.Interfaz
+{
+    partial class FormFacturacion
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.grbDetalleCompra = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblLectura = new System.Windows.Forms.Label();
+            this.lblTotalPagar = new System.Windows.Forms.Label();
+            this.dgvDetalle = new System.Windows.Forms.DataGridView();
+            this.lblPedidoCliente = new System.Windows.Forms.Label();
+            this.btnCancelarFactura = new System.Windows.Forms.Button();
+            this.btnConfirmarDespacho = new System.Windows.Forms.Button();
+            this.lblEtiquetaFactura = new System.Windows.Forms.Label();
+            this.btnAtras = new System.Windows.Forms.Button();
+            this.dgvListadoCompra = new System.Windows.Forms.DataGridView();
+            this.BotonAccion = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.lblGestionCompras = new System.Windows.Forms.Label();
+            this.grbDetalleCompra.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListadoCompra)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // grbDetalleCompra
+            // 
+            this.grbDetalleCompra.Controls.Add(this.label1);
+            this.grbDetalleCompra.Controls.Add(this.lblLectura);
+            this.grbDetalleCompra.Controls.Add(this.lblTotalPagar);
+            this.grbDetalleCompra.Controls.Add(this.dgvDetalle);
+            this.grbDetalleCompra.Controls.Add(this.lblPedidoCliente);
+            this.grbDetalleCompra.Controls.Add(this.btnCancelarFactura);
+            this.grbDetalleCompra.Controls.Add(this.btnConfirmarDespacho);
+            this.grbDetalleCompra.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.grbDetalleCompra.Location = new System.Drawing.Point(17, 328);
+            this.grbDetalleCompra.Name = "grbDetalleCompra";
+            this.grbDetalleCompra.Size = new System.Drawing.Size(957, 228);
+            this.grbDetalleCompra.TabIndex = 28;
+            this.grbDetalleCompra.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.ForestGreen;
+            this.label1.Location = new System.Drawing.Point(18, 172);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(202, 18);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Importe total facturado";
+            // 
+            // lblLectura
+            // 
+            this.lblLectura.AutoSize = true;
+            this.lblLectura.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLectura.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblLectura.Location = new System.Drawing.Point(829, 16);
+            this.lblLectura.Name = "lblLectura";
+            this.lblLectura.Size = new System.Drawing.Size(93, 16);
+            this.lblLectura.TabIndex = 22;
+            this.lblLectura.Text = "Solo lectura";
+            // 
+            // lblTotalPagar
+            // 
+            this.lblTotalPagar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblTotalPagar.AutoSize = true;
+            this.lblTotalPagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalPagar.ForeColor = System.Drawing.Color.Black;
+            this.lblTotalPagar.Location = new System.Drawing.Point(36, 193);
+            this.lblTotalPagar.Name = "lblTotalPagar";
+            this.lblTotalPagar.Size = new System.Drawing.Size(17, 18);
+            this.lblTotalPagar.TabIndex = 21;
+            this.lblTotalPagar.Text = "0";
+            // 
+            // dgvDetalle
+            // 
+            this.dgvDetalle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvDetalle.BackgroundColor = System.Drawing.Color.White;
+            this.dgvDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDetalle.Location = new System.Drawing.Point(18, 37);
+            this.dgvDetalle.Name = "dgvDetalle";
+            this.dgvDetalle.Size = new System.Drawing.Size(923, 128);
+            this.dgvDetalle.TabIndex = 19;
+            // 
+            // lblPedidoCliente
+            // 
+            this.lblPedidoCliente.AutoSize = true;
+            this.lblPedidoCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPedidoCliente.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lblPedidoCliente.Location = new System.Drawing.Point(18, 16);
+            this.lblPedidoCliente.Name = "lblPedidoCliente";
+            this.lblPedidoCliente.Size = new System.Drawing.Size(52, 18);
+            this.lblPedidoCliente.TabIndex = 20;
+            this.lblPedidoCliente.Text = "label1";
+            // 
+            // btnCancelarFactura
+            // 
+            this.btnCancelarFactura.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelarFactura.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelarFactura.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnCancelarFactura.FlatAppearance.BorderSize = 2;
+            this.btnCancelarFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelarFactura.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelarFactura.ForeColor = System.Drawing.Color.DarkRed;
+            this.btnCancelarFactura.Location = new System.Drawing.Point(653, 185);
+            this.btnCancelarFactura.Name = "btnCancelarFactura";
+            this.btnCancelarFactura.Size = new System.Drawing.Size(107, 37);
+            this.btnCancelarFactura.TabIndex = 17;
+            this.btnCancelarFactura.Text = "Cancelar";
+            this.btnCancelarFactura.UseVisualStyleBackColor = true;
+            this.btnCancelarFactura.Click += new System.EventHandler(this.btnCancelarFactura_Click);
+            // 
+            // btnConfirmarDespacho
+            // 
+            this.btnConfirmarDespacho.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnConfirmarDespacho.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnConfirmarDespacho.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConfirmarDespacho.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnConfirmarDespacho.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmarDespacho.ForeColor = System.Drawing.Color.White;
+            this.btnConfirmarDespacho.Location = new System.Drawing.Point(766, 185);
+            this.btnConfirmarDespacho.Name = "btnConfirmarDespacho";
+            this.btnConfirmarDespacho.Size = new System.Drawing.Size(175, 37);
+            this.btnConfirmarDespacho.TabIndex = 18;
+            this.btnConfirmarDespacho.Text = "Confirmar Despacho";
+            this.btnConfirmarDespacho.UseVisualStyleBackColor = false;
+            this.btnConfirmarDespacho.Click += new System.EventHandler(this.btnConfirmarDespacho_Click);
+            // 
+            // lblEtiquetaFactura
+            // 
+            this.lblEtiquetaFactura.AutoSize = true;
+            this.lblEtiquetaFactura.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEtiquetaFactura.Location = new System.Drawing.Point(14, 79);
+            this.lblEtiquetaFactura.Name = "lblEtiquetaFactura";
+            this.lblEtiquetaFactura.Size = new System.Drawing.Size(326, 14);
+            this.lblEtiquetaFactura.TabIndex = 27;
+            this.lblEtiquetaFactura.Text = "Pedidos pendientes de facurar (últimos 30 días)";
+            // 
+            // btnAtras
+            // 
+            this.btnAtras.FlatAppearance.BorderColor = System.Drawing.Color.ForestGreen;
+            this.btnAtras.FlatAppearance.BorderSize = 2;
+            this.btnAtras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtras.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtras.ForeColor = System.Drawing.Color.ForestGreen;
+            this.btnAtras.Location = new System.Drawing.Point(849, 66);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(124, 28);
+            this.btnAtras.TabIndex = 26;
+            this.btnAtras.Text = "Atrás";
+            this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            // 
+            // dgvListadoCompra
+            // 
+            this.dgvListadoCompra.AllowUserToAddRows = false;
+            this.dgvListadoCompra.AllowUserToDeleteRows = false;
+            this.dgvListadoCompra.AllowUserToOrderColumns = true;
+            this.dgvListadoCompra.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvListadoCompra.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvListadoCompra.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvListadoCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListadoCompra.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.BotonAccion});
+            this.dgvListadoCompra.Location = new System.Drawing.Point(13, 100);
+            this.dgvListadoCompra.Name = "dgvListadoCompra";
+            this.dgvListadoCompra.Size = new System.Drawing.Size(960, 222);
+            this.dgvListadoCompra.TabIndex = 25;
+            this.dgvListadoCompra.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvListadoCompra_CellContentClick);
+            // 
+            // BotonAccion
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            this.BotonAccion.DefaultCellStyle = dataGridViewCellStyle3;
+            this.BotonAccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BotonAccion.HeaderText = "Accion";
+            this.BotonAccion.Name = "BotonAccion";
+            this.BotonAccion.Text = "Facturar/Despachar";
+            this.BotonAccion.UseColumnTextForButtonValue = true;
+            // 
+            // lblGestionCompras
+            // 
+            this.lblGestionCompras.BackColor = System.Drawing.Color.ForestGreen;
+            this.lblGestionCompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblGestionCompras.Font = new System.Drawing.Font("Verdana", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGestionCompras.ForeColor = System.Drawing.Color.White;
+            this.lblGestionCompras.Location = new System.Drawing.Point(-1, 5);
+            this.lblGestionCompras.Name = "lblGestionCompras";
+            this.lblGestionCompras.Size = new System.Drawing.Size(987, 58);
+            this.lblGestionCompras.TabIndex = 24;
+            this.lblGestionCompras.Text = "Facturación y Despacho de Pedidos";
+            this.lblGestionCompras.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // FormFacturacion
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Beige;
+            this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.grbDetalleCompra);
+            this.Controls.Add(this.lblEtiquetaFactura);
+            this.Controls.Add(this.btnAtras);
+            this.Controls.Add(this.dgvListadoCompra);
+            this.Controls.Add(this.lblGestionCompras);
+            this.Name = "FormFacturacion";
+            this.Text = "FormFacturacion";
+            this.Load += new System.EventHandler(this.FormFacturacion_Load);
+            this.grbDetalleCompra.ResumeLayout(false);
+            this.grbDetalleCompra.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListadoCompra)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.GroupBox grbDetalleCompra;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblLectura;
+        private System.Windows.Forms.Label lblTotalPagar;
+        private System.Windows.Forms.DataGridView dgvDetalle;
+        private System.Windows.Forms.Label lblPedidoCliente;
+        private System.Windows.Forms.Button btnCancelarFactura;
+        private System.Windows.Forms.Button btnConfirmarDespacho;
+        private System.Windows.Forms.Label lblEtiquetaFactura;
+        private System.Windows.Forms.Button btnAtras;
+        private System.Windows.Forms.DataGridView dgvListadoCompra;
+        private System.Windows.Forms.DataGridViewButtonColumn BotonAccion;
+        private System.Windows.Forms.Label lblGestionCompras;
+    }
+}

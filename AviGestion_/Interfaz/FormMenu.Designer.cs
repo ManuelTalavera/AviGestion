@@ -57,6 +57,12 @@ namespace AviGestion_.UI
             this.lblStockDescripcion = new System.Windows.Forms.Label();
             this.btnProductos = new System.Windows.Forms.Button();
             this.lblProductosDescripcion = new System.Windows.Forms.Label();
+            this.btnFacturacion = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.btnRegistrarPago = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.btnClientes.SuspendLayout();
             this.btnUsuarios.SuspendLayout();
@@ -65,16 +71,17 @@ namespace AviGestion_.UI
             this.btnCategorias.SuspendLayout();
             this.btnVehiculos.SuspendLayout();
             this.btnAyuda.SuspendLayout();
+            this.btnFacturacion.SuspendLayout();
+            this.btnRegistrarPago.SuspendLayout();
             this.SuspendLayout();
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(16, 11);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(12, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(351, 24);
+            this.label3.Size = new System.Drawing.Size(281, 19);
             this.label3.TabIndex = 5;
             this.label3.Text = "Menú Principal - Sistema AviGestión";
             // 
@@ -85,9 +92,8 @@ namespace AviGestion_.UI
             this.panel1.BackColor = System.Drawing.Color.OliveDrab;
             this.panel1.Controls.Add(this.label3);
             this.panel1.Location = new System.Drawing.Point(1, 1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1144, 43);
+            this.panel1.Size = new System.Drawing.Size(982, 35);
             this.panel1.TabIndex = 5;
             // 
             // btnClientes
@@ -95,21 +101,18 @@ namespace AviGestion_.UI
             this.btnClientes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.btnClientes.Controls.Add(this.lblClientesDescripcion);
             this.btnClientes.Controls.Add(this.lblClientesTitulo);
-            this.btnClientes.Location = new System.Drawing.Point(27, 62);
-            this.btnClientes.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClientes.Location = new System.Drawing.Point(20, 50);
             this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Size = new System.Drawing.Size(346, 184);
+            this.btnClientes.Size = new System.Drawing.Size(260, 150);
             this.btnClientes.TabIndex = 6;
             this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
-            this.btnClientes.Paint += new System.Windows.Forms.PaintEventHandler(this.btnClientes_Paint);
             // 
             // lblClientesDescripcion
             // 
             this.lblClientesDescripcion.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClientesDescripcion.Location = new System.Drawing.Point(13, 105);
-            this.lblClientesDescripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblClientesDescripcion.Location = new System.Drawing.Point(10, 85);
             this.lblClientesDescripcion.Name = "lblClientesDescripcion";
-            this.lblClientesDescripcion.Size = new System.Drawing.Size(320, 63);
+            this.lblClientesDescripcion.Size = new System.Drawing.Size(240, 51);
             this.lblClientesDescripcion.TabIndex = 1;
             this.lblClientesDescripcion.Text = "Gestión de perfiles, historial y datos de clientes.";
             this.lblClientesDescripcion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -118,10 +121,9 @@ namespace AviGestion_.UI
             // 
             this.lblClientesTitulo.AutoSize = true;
             this.lblClientesTitulo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClientesTitulo.Location = new System.Drawing.Point(113, 68);
-            this.lblClientesTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblClientesTitulo.Location = new System.Drawing.Point(85, 55);
             this.lblClientesTitulo.Name = "lblClientesTitulo";
-            this.lblClientesTitulo.Size = new System.Drawing.Size(86, 24);
+            this.lblClientesTitulo.Size = new System.Drawing.Size(71, 19);
             this.lblClientesTitulo.TabIndex = 0;
             this.lblClientesTitulo.Text = "Clientes";
             // 
@@ -130,10 +132,9 @@ namespace AviGestion_.UI
             this.btnUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.btnUsuarios.Controls.Add(this.label2);
             this.btnUsuarios.Controls.Add(this.label1);
-            this.btnUsuarios.Location = new System.Drawing.Point(400, 62);
-            this.btnUsuarios.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUsuarios.Location = new System.Drawing.Point(376, 50);
             this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.Size = new System.Drawing.Size(346, 184);
+            this.btnUsuarios.Size = new System.Drawing.Size(260, 150);
             this.btnUsuarios.TabIndex = 7;
             this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             this.btnUsuarios.Paint += new System.Windows.Forms.PaintEventHandler(this.btnUsuarios_Paint);
@@ -141,10 +142,9 @@ namespace AviGestion_.UI
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 105);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(10, 85);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(320, 63);
+            this.label2.Size = new System.Drawing.Size(240, 51);
             this.label2.TabIndex = 7;
             this.label2.Text = "Administración de accesos, roles y permisos de usuario";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -153,10 +153,9 @@ namespace AviGestion_.UI
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(113, 68);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(85, 55);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 24);
+            this.label1.Size = new System.Drawing.Size(78, 19);
             this.label1.TabIndex = 6;
             this.label1.Text = "Usuarios";
             // 
@@ -165,20 +164,18 @@ namespace AviGestion_.UI
             this.btnPedidos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.btnPedidos.Controls.Add(this.lblPedidosDescripcion);
             this.btnPedidos.Controls.Add(this.lblPedidosTitulo);
-            this.btnPedidos.Location = new System.Drawing.Point(773, 62);
-            this.btnPedidos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPedidos.Location = new System.Drawing.Point(712, 50);
             this.btnPedidos.Name = "btnPedidos";
-            this.btnPedidos.Size = new System.Drawing.Size(346, 184);
+            this.btnPedidos.Size = new System.Drawing.Size(260, 150);
             this.btnPedidos.TabIndex = 8;
             this.btnPedidos.Click += new System.EventHandler(this.btnPedidos_Click);
             // 
             // lblPedidosDescripcion
             // 
             this.lblPedidosDescripcion.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPedidosDescripcion.Location = new System.Drawing.Point(13, 105);
-            this.lblPedidosDescripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPedidosDescripcion.Location = new System.Drawing.Point(10, 85);
             this.lblPedidosDescripcion.Name = "lblPedidosDescripcion";
-            this.lblPedidosDescripcion.Size = new System.Drawing.Size(320, 63);
+            this.lblPedidosDescripcion.Size = new System.Drawing.Size(240, 51);
             this.lblPedidosDescripcion.TabIndex = 1;
             this.lblPedidosDescripcion.Text = "Visualización, creación y seguimiento de todos los pedidos.";
             this.lblPedidosDescripcion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -187,10 +184,9 @@ namespace AviGestion_.UI
             // 
             this.lblPedidosTitulo.AutoSize = true;
             this.lblPedidosTitulo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPedidosTitulo.Location = new System.Drawing.Point(117, 68);
-            this.lblPedidosTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPedidosTitulo.Location = new System.Drawing.Point(88, 55);
             this.lblPedidosTitulo.Name = "lblPedidosTitulo";
-            this.lblPedidosTitulo.Size = new System.Drawing.Size(86, 24);
+            this.lblPedidosTitulo.Size = new System.Drawing.Size(72, 19);
             this.lblPedidosTitulo.TabIndex = 0;
             this.lblPedidosTitulo.Text = "Pedidos";
             // 
@@ -199,19 +195,17 @@ namespace AviGestion_.UI
             this.btnAsignarPedidos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.btnAsignarPedidos.Controls.Add(this.lblAsignarPedidosDescripcion);
             this.btnAsignarPedidos.Controls.Add(this.lblAsignarPedidosTitulo);
-            this.btnAsignarPedidos.Location = new System.Drawing.Point(400, 271);
-            this.btnAsignarPedidos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAsignarPedidos.Location = new System.Drawing.Point(289, 390);
             this.btnAsignarPedidos.Name = "btnAsignarPedidos";
-            this.btnAsignarPedidos.Size = new System.Drawing.Size(346, 184);
+            this.btnAsignarPedidos.Size = new System.Drawing.Size(214, 150);
             this.btnAsignarPedidos.TabIndex = 10;
             // 
             // lblAsignarPedidosDescripcion
             // 
             this.lblAsignarPedidosDescripcion.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAsignarPedidosDescripcion.Location = new System.Drawing.Point(13, 105);
-            this.lblAsignarPedidosDescripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAsignarPedidosDescripcion.Location = new System.Drawing.Point(10, 85);
             this.lblAsignarPedidosDescripcion.Name = "lblAsignarPedidosDescripcion";
-            this.lblAsignarPedidosDescripcion.Size = new System.Drawing.Size(320, 63);
+            this.lblAsignarPedidosDescripcion.Size = new System.Drawing.Size(192, 51);
             this.lblAsignarPedidosDescripcion.TabIndex = 1;
             this.lblAsignarPedidosDescripcion.Text = "Asignación de pedidos a vehículos y responsables de reparto.";
             this.lblAsignarPedidosDescripcion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -220,10 +214,9 @@ namespace AviGestion_.UI
             // 
             this.lblAsignarPedidosTitulo.AutoSize = true;
             this.lblAsignarPedidosTitulo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAsignarPedidosTitulo.Location = new System.Drawing.Point(73, 68);
-            this.lblAsignarPedidosTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAsignarPedidosTitulo.Location = new System.Drawing.Point(40, 55);
             this.lblAsignarPedidosTitulo.Name = "lblAsignarPedidosTitulo";
-            this.lblAsignarPedidosTitulo.Size = new System.Drawing.Size(164, 24);
+            this.lblAsignarPedidosTitulo.Size = new System.Drawing.Size(135, 19);
             this.lblAsignarPedidosTitulo.TabIndex = 0;
             this.lblAsignarPedidosTitulo.Text = "Asignar Pedidos";
             // 
@@ -232,10 +225,9 @@ namespace AviGestion_.UI
             this.btnCategorias.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.btnCategorias.Controls.Add(this.lblCategoriasDescripcion);
             this.btnCategorias.Controls.Add(this.lblCategoriasTitulo);
-            this.btnCategorias.Location = new System.Drawing.Point(27, 480);
-            this.btnCategorias.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCategorias.Location = new System.Drawing.Point(20, 390);
             this.btnCategorias.Name = "btnCategorias";
-            this.btnCategorias.Size = new System.Drawing.Size(346, 184);
+            this.btnCategorias.Size = new System.Drawing.Size(260, 150);
             this.btnCategorias.TabIndex = 12;
             this.btnCategorias.Click += new System.EventHandler(this.btnCategorias_Click);
             this.btnCategorias.Paint += new System.Windows.Forms.PaintEventHandler(this.btnCategorias_Paint);
@@ -243,10 +235,9 @@ namespace AviGestion_.UI
             // lblCategoriasDescripcion
             // 
             this.lblCategoriasDescripcion.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoriasDescripcion.Location = new System.Drawing.Point(13, 105);
-            this.lblCategoriasDescripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCategoriasDescripcion.Location = new System.Drawing.Point(10, 85);
             this.lblCategoriasDescripcion.Name = "lblCategoriasDescripcion";
-            this.lblCategoriasDescripcion.Size = new System.Drawing.Size(320, 63);
+            this.lblCategoriasDescripcion.Size = new System.Drawing.Size(240, 51);
             this.lblCategoriasDescripcion.TabIndex = 1;
             this.lblCategoriasDescripcion.Text = "Organización y clasificación de productos por categoría.";
             this.lblCategoriasDescripcion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -255,10 +246,9 @@ namespace AviGestion_.UI
             // 
             this.lblCategoriasTitulo.AutoSize = true;
             this.lblCategoriasTitulo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoriasTitulo.Location = new System.Drawing.Point(104, 68);
-            this.lblCategoriasTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCategoriasTitulo.Location = new System.Drawing.Point(78, 55);
             this.lblCategoriasTitulo.Name = "lblCategoriasTitulo";
-            this.lblCategoriasTitulo.Size = new System.Drawing.Size(113, 24);
+            this.lblCategoriasTitulo.Size = new System.Drawing.Size(92, 19);
             this.lblCategoriasTitulo.TabIndex = 0;
             this.lblCategoriasTitulo.Text = "Categorías";
             // 
@@ -267,19 +257,17 @@ namespace AviGestion_.UI
             this.btnVehiculos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.btnVehiculos.Controls.Add(this.lblVehiculosDescripcion);
             this.btnVehiculos.Controls.Add(this.lblVehiculosTitulo);
-            this.btnVehiculos.Location = new System.Drawing.Point(400, 480);
-            this.btnVehiculos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnVehiculos.Location = new System.Drawing.Point(509, 390);
             this.btnVehiculos.Name = "btnVehiculos";
-            this.btnVehiculos.Size = new System.Drawing.Size(346, 184);
+            this.btnVehiculos.Size = new System.Drawing.Size(197, 150);
             this.btnVehiculos.TabIndex = 13;
             // 
             // lblVehiculosDescripcion
             // 
             this.lblVehiculosDescripcion.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVehiculosDescripcion.Location = new System.Drawing.Point(13, 105);
-            this.lblVehiculosDescripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblVehiculosDescripcion.Location = new System.Drawing.Point(11, 85);
             this.lblVehiculosDescripcion.Name = "lblVehiculosDescripcion";
-            this.lblVehiculosDescripcion.Size = new System.Drawing.Size(320, 63);
+            this.lblVehiculosDescripcion.Size = new System.Drawing.Size(181, 51);
             this.lblVehiculosDescripcion.TabIndex = 1;
             this.lblVehiculosDescripcion.Text = "Gestión de flota, mantenimiento y asignación de vehículos.";
             this.lblVehiculosDescripcion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -288,10 +276,9 @@ namespace AviGestion_.UI
             // 
             this.lblVehiculosTitulo.AutoSize = true;
             this.lblVehiculosTitulo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVehiculosTitulo.Location = new System.Drawing.Point(107, 68);
-            this.lblVehiculosTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblVehiculosTitulo.Location = new System.Drawing.Point(51, 55);
             this.lblVehiculosTitulo.Name = "lblVehiculosTitulo";
-            this.lblVehiculosTitulo.Size = new System.Drawing.Size(102, 24);
+            this.lblVehiculosTitulo.Size = new System.Drawing.Size(84, 19);
             this.lblVehiculosTitulo.TabIndex = 0;
             this.lblVehiculosTitulo.Text = "Vehículos";
             // 
@@ -300,19 +287,17 @@ namespace AviGestion_.UI
             this.btnAyuda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.btnAyuda.Controls.Add(this.lblAyudaDescripcion);
             this.btnAyuda.Controls.Add(this.lblAyudaTitulo);
-            this.btnAyuda.Location = new System.Drawing.Point(773, 480);
-            this.btnAyuda.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAyuda.Location = new System.Drawing.Point(712, 390);
             this.btnAyuda.Name = "btnAyuda";
-            this.btnAyuda.Size = new System.Drawing.Size(346, 184);
+            this.btnAyuda.Size = new System.Drawing.Size(260, 150);
             this.btnAyuda.TabIndex = 14;
             // 
             // lblAyudaDescripcion
             // 
             this.lblAyudaDescripcion.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAyudaDescripcion.Location = new System.Drawing.Point(13, 105);
-            this.lblAyudaDescripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAyudaDescripcion.Location = new System.Drawing.Point(10, 85);
             this.lblAyudaDescripcion.Name = "lblAyudaDescripcion";
-            this.lblAyudaDescripcion.Size = new System.Drawing.Size(320, 63);
+            this.lblAyudaDescripcion.Size = new System.Drawing.Size(240, 51);
             this.lblAyudaDescripcion.TabIndex = 1;
             this.lblAyudaDescripcion.Text = "Acceso a manuales, guías y soporte técnico.";
             this.lblAyudaDescripcion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -321,10 +306,9 @@ namespace AviGestion_.UI
             // 
             this.lblAyudaTitulo.AutoSize = true;
             this.lblAyudaTitulo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAyudaTitulo.Location = new System.Drawing.Point(140, 68);
-            this.lblAyudaTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAyudaTitulo.Location = new System.Drawing.Point(105, 55);
             this.lblAyudaTitulo.Name = "lblAyudaTitulo";
-            this.lblAyudaTitulo.Size = new System.Drawing.Size(68, 24);
+            this.lblAyudaTitulo.Size = new System.Drawing.Size(57, 19);
             this.lblAyudaTitulo.TabIndex = 0;
             this.lblAyudaTitulo.Text = "Ayuda";
             // 
@@ -334,10 +318,9 @@ namespace AviGestion_.UI
             this.btnStock.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.btnStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStock.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStock.Location = new System.Drawing.Point(773, 271);
-            this.btnStock.Margin = new System.Windows.Forms.Padding(4);
+            this.btnStock.Location = new System.Drawing.Point(712, 220);
             this.btnStock.Name = "btnStock";
-            this.btnStock.Size = new System.Drawing.Size(347, 185);
+            this.btnStock.Size = new System.Drawing.Size(260, 150);
             this.btnStock.TabIndex = 15;
             this.btnStock.Text = "Stock";
             this.btnStock.UseVisualStyleBackColor = false;
@@ -348,10 +331,9 @@ namespace AviGestion_.UI
             this.lblStockDescripcion.AutoSize = true;
             this.lblStockDescripcion.BackColor = System.Drawing.Color.Transparent;
             this.lblStockDescripcion.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStockDescripcion.Location = new System.Drawing.Point(804, 390);
-            this.lblStockDescripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblStockDescripcion.Location = new System.Drawing.Point(736, 310);
             this.lblStockDescripcion.Name = "lblStockDescripcion";
-            this.lblStockDescripcion.Size = new System.Drawing.Size(268, 46);
+            this.lblStockDescripcion.Size = new System.Drawing.Size(215, 40);
             this.lblStockDescripcion.TabIndex = 16;
             this.lblStockDescripcion.Text = "Gestión de inventario en tiempo real y\r\n alertas de nivel bajo.";
             this.lblStockDescripcion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -362,10 +344,9 @@ namespace AviGestion_.UI
             this.btnProductos.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.btnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProductos.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProductos.Location = new System.Drawing.Point(23, 271);
-            this.btnProductos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnProductos.Location = new System.Drawing.Point(17, 220);
             this.btnProductos.Name = "btnProductos";
-            this.btnProductos.Size = new System.Drawing.Size(347, 185);
+            this.btnProductos.Size = new System.Drawing.Size(260, 150);
             this.btnProductos.TabIndex = 17;
             this.btnProductos.Text = "Productos";
             this.btnProductos.UseVisualStyleBackColor = false;
@@ -374,20 +355,83 @@ namespace AviGestion_.UI
             // lblProductosDescripcion
             // 
             this.lblProductosDescripcion.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProductosDescripcion.Location = new System.Drawing.Point(35, 385);
-            this.lblProductosDescripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblProductosDescripcion.Location = new System.Drawing.Point(26, 313);
             this.lblProductosDescripcion.Name = "lblProductosDescripcion";
-            this.lblProductosDescripcion.Size = new System.Drawing.Size(320, 63);
+            this.lblProductosDescripcion.Size = new System.Drawing.Size(240, 51);
             this.lblProductosDescripcion.TabIndex = 1;
             this.lblProductosDescripcion.Text = "Control y mantenimiento detallado del catálogo de productos.";
             this.lblProductosDescripcion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnFacturacion
+            // 
+            this.btnFacturacion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.btnFacturacion.Controls.Add(this.label4);
+            this.btnFacturacion.Controls.Add(this.label5);
+            this.btnFacturacion.Location = new System.Drawing.Point(289, 220);
+            this.btnFacturacion.Name = "btnFacturacion";
+            this.btnFacturacion.Size = new System.Drawing.Size(214, 150);
+            this.btnFacturacion.TabIndex = 11;
+            this.btnFacturacion.Click += new System.EventHandler(this.btnFacturacion_Click);
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(10, 85);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(192, 51);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "-";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(56, 55);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(100, 19);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Facturación";
+            // 
+            // btnRegistrarPago
+            // 
+            this.btnRegistrarPago.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.btnRegistrarPago.Controls.Add(this.label6);
+            this.btnRegistrarPago.Controls.Add(this.label7);
+            this.btnRegistrarPago.Location = new System.Drawing.Point(509, 220);
+            this.btnRegistrarPago.Name = "btnRegistrarPago";
+            this.btnRegistrarPago.Size = new System.Drawing.Size(197, 150);
+            this.btnRegistrarPago.TabIndex = 11;
+            this.btnRegistrarPago.Click += new System.EventHandler(this.btnRegistrarPago_Click);
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(10, 85);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(182, 51);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "-";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(31, 55);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(132, 19);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Registrar Pagos";
+            // 
             // FormMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OldLace;
-            this.ClientSize = new System.Drawing.Size(1147, 702);
+            this.ClientSize = new System.Drawing.Size(984, 570);
+            this.Controls.Add(this.btnRegistrarPago);
+            this.Controls.Add(this.btnFacturacion);
             this.Controls.Add(this.lblProductosDescripcion);
             this.Controls.Add(this.btnProductos);
             this.Controls.Add(this.lblStockDescripcion);
@@ -400,7 +444,6 @@ namespace AviGestion_.UI
             this.Controls.Add(this.btnUsuarios);
             this.Controls.Add(this.btnClientes);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormMenu";
             this.Text = "FormMenu";
             this.Load += new System.EventHandler(this.FormMenu_Load);
@@ -420,6 +463,10 @@ namespace AviGestion_.UI
             this.btnVehiculos.PerformLayout();
             this.btnAyuda.ResumeLayout(false);
             this.btnAyuda.PerformLayout();
+            this.btnFacturacion.ResumeLayout(false);
+            this.btnFacturacion.PerformLayout();
+            this.btnRegistrarPago.ResumeLayout(false);
+            this.btnRegistrarPago.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -461,6 +508,12 @@ namespace AviGestion_.UI
         private System.Windows.Forms.Label lblStockDescripcion;
         private System.Windows.Forms.Button btnProductos;
         private System.Windows.Forms.Label lblProductosDescripcion;
+        private System.Windows.Forms.Panel btnFacturacion;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel btnRegistrarPago;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }
 

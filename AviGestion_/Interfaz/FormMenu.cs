@@ -1,4 +1,5 @@
-﻿using AviGestion_.Interfaz;
+﻿using AviGestion;
+using AviGestion_.Interfaz;
 using AviGestion_.Logica;
 using System;
 using System.Collections.Generic;
@@ -154,6 +155,15 @@ namespace AviGestion_.UI
             frm.Show();
             this.Hide();
         }
+
+        private void btnVehiculos_Click(object sender, EventArgs e)
+        {
+            FormVehiculo frm = new FormVehiculo (usuarioActual);
+            frm.FormClosed += (s, args) => this.Show();
+            frm.Show();
+            this.Hide();
+        }
+    }
     }
 
-}
+

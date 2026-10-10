@@ -1,7 +1,7 @@
 ﻿
 namespace AviGestion_.Logica
 {
-    public class ResumenFinanciero
+    public class ResumenFinanciero //nuevo
     {
         // Resumen de Estado de Cuenta (Panel Superior)
         public decimal TotalComprado { get; set; }

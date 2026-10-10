@@ -15,7 +15,7 @@ namespace AviGestion_.Interfaz
         private List<PagoPedido> listaOriginalPedidos = new List<PagoPedido>();
         private Usuario usuarioActual;
 
-        public FormRegistrarPago(Usuario usuarioActual)
+        public FormRegistrarPago(Usuario usuarioActual) //Nuevo form
         {
             InitializeComponent();
             LimpiarOcultarPanel();

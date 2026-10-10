@@ -1,7 +1,7 @@
 ﻿
 namespace AviGestion_.Logica
 {
-    public class PagoPedido
+    public class PagoPedido//nuevo
     {
         //Datos del pedido
         public int NºPedido { get; set; }

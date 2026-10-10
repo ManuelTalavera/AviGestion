@@ -10,7 +10,7 @@ namespace AviGestion_.Logica
     public class HistorialClienteLogica
     {
         private HistorialClienteDatos historialDatos = new HistorialClienteDatos();
-        public List<HistorialPedido> ObtenerPedidosCliente(int idCliente)
+        public List<HistorialPedido> ObtenerPedidosCliente(int idCliente) //nuevo
         {
             return historialDatos.ObtenerPedidosCliente(idCliente);
         }

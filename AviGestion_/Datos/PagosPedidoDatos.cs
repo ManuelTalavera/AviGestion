@@ -6,7 +6,7 @@ using AviGestion_.Logica;
 
 namespace AviGestion_.Datos
 {
-    public class PagosPedidoDatos
+    public class PagosPedidoDatos//nuevo
     {
         public List<PagoPedido> ObtenerPedidosParaPagos()
         {

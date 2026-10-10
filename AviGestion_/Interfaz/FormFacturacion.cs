@@ -12,7 +12,7 @@ namespace AviGestion_.Interfaz
         private int idPedidoSeleccionado = 0;
         private Usuario usuarioActual;
 
-        public FormFacturacion(Usuario usuarioActual)
+        public FormFacturacion(Usuario usuarioActual)//nuevo form
         {
             InitializeComponent();
             CenterToParent();

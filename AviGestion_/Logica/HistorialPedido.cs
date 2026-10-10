@@ -1,7 +1,7 @@
 ﻿
 namespace AviGestion_.Logica
 {
-    public class HistorialPedido
+    public class HistorialPedido //nuevo
     {
         public int NumeroPedido { get; set; }
         public int NumeroFila { get; set; }

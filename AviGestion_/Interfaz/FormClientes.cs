@@ -19,7 +19,7 @@ namespace AviGestion_.Interfaz
         private int idClienteSeleccionado = -1;
         private Usuario usuarioActual; 
 
-        public FormClientes(Usuario usuario)//MODIFICADO
+        public FormClientes(Usuario usuario)//Modificado
         {
             InitializeComponent();
             usuarioActual = usuario;
@@ -34,7 +34,7 @@ namespace AviGestion_.Interfaz
         private void FormClientes_Load(object sender, EventArgs e)
         {
             dgvTablaClientes.AutoGenerateColumns = false;
-            //Configuración de grilla a solo lectura
+            //Configuración de grilla a solo lectura//
             dgvTablaClientes.ReadOnly = true;
             dgvTablaClientes.AllowUserToAddRows = false;
             dgvTablaClientes.AllowUserToDeleteRows = false;

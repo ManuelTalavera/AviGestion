@@ -5,7 +5,7 @@ using AviGestion_.Logica;
 
 namespace AviGestion_.Datos
 {
-    public class HistorialClienteDatos
+    public class HistorialClienteDatos //Nuevo: Clase para obtener el historial de pedidos y resumen financiero de un cliente
     {
         // Pedidos facturados del cliente (compra vigente, no cancelados).
         // El monto sale de Compra.Total y el estado de pago se calcula en la consulta.

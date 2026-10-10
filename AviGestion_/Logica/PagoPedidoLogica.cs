@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace AviGestion_.Logica
 {
-    public class PagoPedidoLogica
+    public class PagoPedidoLogica //nuevo
     {
         private PagosPedidoDatos _pagosDatos = new PagosPedidoDatos();
 

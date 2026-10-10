@@ -48,7 +48,7 @@ namespace AviGestion_.Interfaz
             dgvHistorial.AutoGenerateColumns = false;
             if (dgvHistorial.Columns.Contains("colN")) dgvHistorial.Columns["colN"].DataPropertyName = "NumeroFila";
 
-            // SOLUCIÓN 2: Corregimos "NºPedido" por "NumeroPedido" para que enlace correctamente con la propiedad C#
+            // Corregimos "NºPedido" por "NumeroPedido" para que enlace correctamente con la propiedad C#
             if (dgvHistorial.Columns.Contains("colNumPedidos")) dgvHistorial.Columns["colNumPedidos"].DataPropertyName = "NumeroPedido";
 
             if (dgvHistorial.Columns.Contains("colFecha")) dgvHistorial.Columns["colFecha"].DataPropertyName = "Fecha";

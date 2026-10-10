@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 
 namespace AviGestion_.Datos
 {
-    public class FacturacionDatos
+    public class FacturacionDatos // nuevo  
     {
         // Grilla superior: pedidos pendientes de facturar (últimos 30 días)
         public List<PagoPedido> ObtenerPedidosPendientes()

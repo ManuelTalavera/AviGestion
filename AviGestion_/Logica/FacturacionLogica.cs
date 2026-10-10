@@ -12,7 +12,7 @@ namespace AviGestion_.Logica
         CompraYaRegistrada = 2
     }
 
-    public class FacturacionLogica
+    public class FacturacionLogica//nuevo
     {
         private FacturacionDatos datos = new FacturacionDatos();
 
